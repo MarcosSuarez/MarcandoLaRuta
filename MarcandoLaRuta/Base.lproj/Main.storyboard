@@ -15,11 +15,12 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-Bc-MWB"/>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c77-fz-k5Y">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-Bc-MWB"/>
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c77-fz-k5Y">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Normal"/>
                                     <segment title="Satélite"/>
@@ -32,13 +33,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2i7-Bc-MWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P4W-4D-0vI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2i7-Bc-MWB" secondAttribute="bottom" id="2Hs-1o-8kc"/>
+                            <constraint firstItem="2i7-Bc-MWB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kxh-ey-qBm"/>
+                            <constraint firstItem="2i7-Bc-MWB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LO6-5h-Nz4"/>
                             <constraint firstItem="c77-fz-k5Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TmU-oi-kqg"/>
-                            <constraint firstItem="2i7-Bc-MWB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pCg-mu-c7t"/>
-                            <constraint firstAttribute="trailing" secondItem="2i7-Bc-MWB" secondAttribute="trailing" id="tMG-7V-E1O"/>
+                            <constraint firstAttribute="trailing" secondItem="2i7-Bc-MWB" secondAttribute="trailing" id="VWL-re-fd4"/>
                             <constraint firstItem="c77-fz-k5Y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="whS-Bm-vBZ"/>
-                            <constraint firstItem="2i7-Bc-MWB" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="zVR-0S-dc3"/>
                         </constraints>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="c77-fz-k5Y"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mapa" destination="2i7-Bc-MWB" id="lrr-LU-wPW"/>
@@ -46,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="134.78260869565219" y="137.77173913043478"/>
         </scene>
     </scenes>
 </document>
